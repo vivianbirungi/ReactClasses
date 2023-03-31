@@ -15,7 +15,7 @@ function Expense(props) {
         </thead>
         <tbody>
           {props.data.map((item, index) => (
-            <tr>
+            <tr key={index}>
               <td>{index + 1}</td>
               <td>{item.name}</td>
               <td>{item.category}</td>

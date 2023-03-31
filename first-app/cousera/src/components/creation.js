@@ -1,9 +1,10 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 function CreationExpenseForm() {
   return (
-    <card className="card " style={{ padding: 15 }}>
+    <Card className="card" style={{ padding: 15 }}>
       <div className="form-row">
         <Form>
           <Form.Group className="mb-3">
@@ -36,7 +37,7 @@ function CreationExpenseForm() {
           <Button type="submit">Submit</Button>
         </Form>
       </div>
-    </card>
+    </Card>
   );
 }
 
