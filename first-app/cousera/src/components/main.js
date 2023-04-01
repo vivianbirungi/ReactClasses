@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CreationExpenseForm from "./creation";
 import Expense from "./expense";
 import Category from "./category";
+import { Link } from "react-router-dom";
 
 function MainPage() {
   const [expenses, setExpense] = useState([
@@ -20,6 +21,11 @@ function MainPage() {
   };
   return (
     <>
+      <ul>
+        <li>
+          <Link to="/about"> Move to about</Link>
+        </li>
+      </ul>
       <CreationExpenseForm action={getExpenses} />
       <Expense data={expenses} />
       <Category cat={categories} />
