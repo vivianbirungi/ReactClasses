@@ -6,7 +6,15 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+/* .navbar a.active {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+} */
+.navbar a {
+  margin-right: 6px;
+  margin-left: 10px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

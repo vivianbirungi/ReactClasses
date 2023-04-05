@@ -1,6 +1,12 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 function Expense(props) {
+  const data = [
+    { expenseName: "Water", category: "Utilities", amount: 10000 },
+    { expenseName: "Milk", category: "Grocery", amount: 1600 },
+    { expenseName: "Electricity", category: "Utilities", amount: 16000 },
+  ];
+
   return (
     <>
       <Table striped bordered hover>
@@ -13,7 +19,7 @@ function Expense(props) {
           </tr>
         </thead>
         <tbody>
-          {props.data.map((item, index) => (
+          {data.map((item, index) => (
             <tr key={index}>
               <td>{index + 1}</td>
               <td>{item.expenseName}</td>

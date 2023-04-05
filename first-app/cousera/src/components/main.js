@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import CreationExpenseForm from "./creation";
-import Expense from "./expense";
-import Category from "./category";
-import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 function MainPage() {
+  const navigate = useNavigate();
   const [expenses, setExpense] = useState([
     { expenseName: "Water", category: "Utilities", amount: 10000 },
     { expenseName: "Milk", category: "Grocery", amount: 1600 },
@@ -21,14 +18,9 @@ function MainPage() {
   };
   return (
     <>
-      <ul>
-        <li>
-          <Link to="/about"> Move to about</Link>
-        </li>
-      </ul>
-      <CreationExpenseForm action={getExpenses} />
-      <Expense data={expenses} />
-      <Category cat={categories} />
+      <button onClick={() => navigate("/create")}>Create Expenses</button>
+      <button onClick={() => navigate("/expenses")}>View Expenses</button>
+      <button onClick={() => navigate("/categories")}>View categories</button>
     </>
   );
 }

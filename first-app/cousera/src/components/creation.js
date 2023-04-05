@@ -3,7 +3,10 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Expense from "./expense";
+import { useNavigate } from "react-router-dom";
 function CreationExpenseForm(props) {
+  const navigate = useNavigate();
+
   const [expenseName, setExpenseName] = useState("");
   const [amount, setAmount] = useState(0);
   const [category, setCategory] = useState("");
@@ -12,9 +15,11 @@ function CreationExpenseForm(props) {
     // console.log(expenseName, amount, category);
     props.action([{ expenseName, amount, category }]);
   };
+  //use replace:true to clear history
   return (
     <>
       {" "}
+      <Button onClick={() => navigate(-1)}>Back</Button>
       <Card className="card" style={{ padding: 15 }}>
         <div className="form-row">
           <Form>
@@ -51,7 +56,7 @@ function CreationExpenseForm(props) {
               </Form.Select>
             </Form.Group>
 
-            <Button type="submit" onClick={handleState}>
+            <Button type="submit" onClick={() => navigate("/expenses")}>
               Submit
             </Button>
           </Form>

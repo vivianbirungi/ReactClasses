@@ -1,16 +1,18 @@
 import React from "react";
 import Stack from "react-bootstrap/Stack";
+import { Link, Outlet } from "react-router-dom";
 
 function Category(props) {
+  const cat = ["utilities", "grocery", "entertainment"];
   return (
     <>
-      <Stack direction="horizontal" gap={3}>
-        {props.cat.map((category) => (
-          <div className="bg-light border" key={category} value={category}>
-            {category}
-          </div>
+      {/* dont include forward slash for the nested route */}
+      <nav>
+        {cat.map((category) => (
+          <Link to={category}>{category}</Link>
         ))}
-      </Stack>
+      </nav>
+      <Outlet />
     </>
   );
 }
