@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 export default function Navbar() {
   const NavLinkStyle = ({ isActive }) => {
     return {
@@ -24,30 +24,13 @@ export default function Navbar() {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
-        {/* <ul className="navbar-nav">
-          <li className="nav-item active">
-            <a className="nav-link" href="/">
-              Home
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/about">
-              About
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/contact">
-              Contact
-            </a>
-          </li>
-        </ul> */}
-        <NavLink style={NavLinkStyle} to="/contact">
+        <NavLink activeClassName="active" to="/contact">
           Contact Us
         </NavLink>
-        <NavLink style={NavLinkStyle} to="/about">
+        <NavLink activeClassName="active" to="/about">
           About
         </NavLink>
-        <NavLink style={NavLinkStyle} to="/">
+        <NavLink activeClassName="active" to="/">
           Home
         </NavLink>
       </div>

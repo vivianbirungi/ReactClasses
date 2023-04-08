@@ -6,11 +6,11 @@
   height: 40vmin;
   pointer-events: none;
 }
-/* .navbar a.active {
+.navbar a.active {
   color: red;
   text-decoration: none;
   font-weight: bold;
-} */
+}
 .navbar a {
   margin-right: 6px;
   margin-left: 10px;

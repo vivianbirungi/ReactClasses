@@ -9,7 +9,9 @@ function Category(props) {
       {/* dont include forward slash for the nested route */}
       <nav>
         {cat.map((category) => (
-          <Link to={category}>{category}</Link>
+          <Link to={category} style={{ margin: 10 }}>
+            {category}
+          </Link>
         ))}
       </nav>
       <Outlet />

@@ -3,9 +3,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Expense from "./expense";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Is this the hook? ok
 function CreationExpenseForm(props) {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); //Creating an object  of the hook and assigning to navigate
 
   const [expenseName, setExpenseName] = useState("");
   const [amount, setAmount] = useState(0);
@@ -19,7 +19,7 @@ function CreationExpenseForm(props) {
   return (
     <>
       {" "}
-      <Button onClick={() => navigate(-1)}>Back</Button>
+      <Button onClick={() => navigate(-1)}>Go Back</Button>
       <Card className="card" style={{ padding: 15 }}>
         <div className="form-row">
           <Form>
@@ -55,9 +55,8 @@ function CreationExpenseForm(props) {
                 <option value="utilities">Utilities</option>
               </Form.Select>
             </Form.Group>
-
             <Button type="submit" onClick={() => navigate("/expenses")}>
-              Submit
+              {" "}
             </Button>
           </Form>
         </div>
